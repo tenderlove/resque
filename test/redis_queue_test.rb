@@ -43,7 +43,6 @@ describe "Resque::Queue" do
     queue = q
 
     t = Thread.new { queue.poll(1) }
-    sleep 1.1
     assert_nil t.join.value
   end
 
